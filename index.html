@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Parlor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍦 Welcome to the Ice Cream Parlor</h1>
+    </header>
+
+    <!-- Add Flavor Form -->
+    <section id="add-flavor">
+        <h2>Add a New Flavor</h2>
+        <form id="addFlavorForm">
+            <label for="name">Flavor Name:</label>
+            <input type="text" id="name" name="name" placeholder="E.g., Chocolate" required>
+            
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" placeholder="E.g., Rich chocolate flavor" required>
+            
+            <label for="is_seasonal">Seasonal:</label>
+            <input type="checkbox" id="is_seasonal" name="is_seasonal">
+            
+            <button type="submit">Add Flavor</button>
+        </form>
+    </section>
+
+    <!-- View Flavors -->
+    <section id="view-flavors">
+        <h2>Our Flavors</h2>
+        <button id="getFlavorsBtn">Show All Flavors</button>
+        <ul id="flavorsList"></ul>
+    </section>
+
+    <!-- Add Inventory Item -->
+    <section id="add-inventory">
+        <h2>Manage Inventory</h2>
+        <form id="addInventoryForm">
+            <label for="ingredient_name">Ingredient Name:</label>
+            <input type="text" id="ingredient_name" name="ingredient_name" placeholder="E.g., Sugar" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="E.g., 10" required>
+            
+            <button type="submit">Add Inventory Item</button>
+        </form>
+    </section>
+
+    <!-- View Inventory -->
+    <section id="view-inventory">
+        <h2>Inventory List</h2>
+        <button id="getInventoryBtn">Show Inventory</button>
+        <ul id="inventoryList"></ul>
+    </section>
+
+    <!-- Add Customer Suggestion -->
+    <section id="add-suggestion">
+        <h2>Customer Suggestions</h2>
+        <form id="addSuggestionForm">
+            <label for="flavor_name">Suggested Flavor:</label>
+            <input type="text" id="flavor_name" name="flavor_name" placeholder="E.g., Mint" required>
+            
+            <label for="customer_name">Your Name:</label>
+            <input type="text" id="customer_name" name="customer_name" placeholder="E.g., John">
+            
+            <label for="allergy_concerns">Allergy Concerns:</label>
+            <input type="text" id="allergy_concerns" name="allergy_concerns" placeholder="E.g., Dairy">
+            
+            <button type="submit">Submit Suggestion</button>
+        </form>
+    </section>
+
+    <!-- View Customer Suggestions -->
+    <section id="view-suggestions">
+        <h2>All Suggestions</h2>
+        <button id="getSuggestionsBtn">Show Suggestions</button>
+        <ul id="suggestionsList"></ul>
+    </section>
+
+    <!-- Add Allergen -->
+    <section id="add-allergen">
+        <h2>Add an Allergen</h2>
+        <form id="addAllergenForm">
+            <label for="allergen_name">Allergen Name:</label>
+            <input type="text" id="allergen_name" name="allergen_name" placeholder="E.g., Nuts" required>
+            
+            <button type="submit">Add Allergen</button>
+        </form>
+    </section>
+
+    <!-- View Allergens -->
+    <section id="view-allergens">
+        <h2>Allergens List</h2>
+        <button id="getAllergensBtn">Show Allergens</button>
+        <ul id="allergensList"></ul>
+    </section>
+    <!-- Add to Cart -->
+<section id="add-to-cart">
+    <h2>Add to Cart</h2>
+    <form id="addToCartForm">
+        <label for="cart_flavor_name">Flavor Name:</label>
+        <input type="text" id="cart_flavor_name" name="cart_flavor_name" placeholder="E.g., Chocolate" required><br><br>
+        <button type="submit">Add to Cart</button>
+    </form>
+</section>
+
+<!-- View Cart -->
+<section id="view-cart">
+    <h2>View Cart</h2>
+    <button id="getCartBtn">Get Cart</button>
+    <ul id="cartList"></ul>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
