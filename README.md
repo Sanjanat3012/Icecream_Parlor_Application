@@ -64,6 +64,44 @@ Cart Management
 Add flavors to the cart using the "Add to Cart" section.
 View your favorite products in the cart using the "Get Cart" button.
 
+
+Local Development Setup
+Clone the Repository:
+
+git clone https://github.com/your-repository-name.git
+cd ice_cream_parlor
+
+Set Up the Backend:
+
+Create and activate a virtual environment:
+python -m venv venv
+source venv/bin/activate  # On Linux/MacOS
+venv\Scripts\activate     # On Windows
+
+Install required Python packages:
+pip install flask flask-cors
+
+Start the Flask server:
+python app.py
+The server will run at http://127.0.0.1:5000.
+
+Open the Frontend:
+
+Open index.html in your browser to use the application.
+Using Docker
+Build and Run the Docker Container
+Build the Docker Image:
+
+docker build -t ice_cream_parlor .
+
+Run the Container:
+docker run -d -p 5000:5000 ice_cream_parlor
+
+Access the Application:
+Backend: Open http://127.0.0.1:5000 in a browser or Postman.
+Frontend: Open index.html in your browser.
+
+
 ice_cream_parlor/
 
 ├── assets/
@@ -79,6 +117,8 @@ ice_cream_parlor/
 ├── script.js                    # Frontend JavaScript functionality
 
 ├── README.md                    # Project documentation
+
+├── Dockerfile   
 
 └── ice_cream_cafe.db            # SQLite database (auto-created)
 
